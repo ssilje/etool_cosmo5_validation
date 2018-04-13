@@ -124,8 +124,8 @@ echo 'selected variable: ' $VarName1
 set REST=F  # if "T": restart after last completed year
 set RUNID=`echo $2 | sed 's/[^a-zA-Z0-9_-]//g'`  #CON516
 echo 'for simulation: ' $RUNID   
-set StartYearM=1981 
-set EndYearM=2000 
+set StartYearM=1979 
+set EndYearM=1979 
 eval set StartYearO=${StartYearM} 
 eval set EndYearO=${EndYearM}
 set EOBSRES=0.25
@@ -141,8 +141,8 @@ setenv RefDataPMSL pp_${EOBSRES}deg_reg_v${EOBSVER}.nc
 setenv RefDataElev elev_${EOBSRES}deg_reg_v${EOBSVER}.nc
 setenv CloudPath /project/pr04/observations/clct
 setenv RefDataCLCT cru_ts3.22.1901.2013.cld.dat.nc
-set CLMPath  = /project/pr04/cosmo5_validation/${RUNID}/output
-set CLMLSMFile=/project/pr04/cosmo5_validation/lffd1979010100c.nc
+set CLMPath  = /scratch/snx3000/demorym/RUN_CCLM5.0_6_ERAI_EUR-44/output
+set CLMLSMFile=/scratch/snx3000/demorym/RUN_CCLM5.0_6_ERAI_EUR-44/output/out01/1979/lffd1979010100c.nc
 setenv CLMInDir_T_2M out04
 setenv CLMInDir_TOT_PREC out03
 setenv CLMInDir_TMIN_2M out07
